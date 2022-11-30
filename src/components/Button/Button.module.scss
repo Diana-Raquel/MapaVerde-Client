@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.Button{
+    padding: 0.5rem 1rem;
+  
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: black;
+  
+      background: $theme-accent-color;
+      border: none;
+      border-radius: 0.5rem;
+  
+      cursor: pointer;
+      transition: all ease-in-out 250ms;
+  
+
+      &:disabled {
+        color: rgb(0, 0, 0);
+        cursor: not-allowed;
+      }
+}
