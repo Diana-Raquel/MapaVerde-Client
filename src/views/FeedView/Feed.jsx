@@ -26,7 +26,7 @@ const Feed = () => {
   const fetchPosts = async () => {
     try {
       startLoading();
-      //const response = await fetch("http://localhost:3500/api/event/");
+      //const response = await fetch("https://mapaverde-api-production.up.railway.app/api/event/");
       const { data } = await axios.get("/event");
       setPosts(data.posts);
     } catch (error) {

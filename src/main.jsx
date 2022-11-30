@@ -13,7 +13,7 @@ import axios from 'axios';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-axios.defaults.baseURL = import.meta.env.VITE_APIENDPOINT || "http://localhost:3500/api";
+axios.defaults.baseURL = import.meta.env.VITE_APIENDPOINT || "https://mapaverde-api-production.up.railway.app/api";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
