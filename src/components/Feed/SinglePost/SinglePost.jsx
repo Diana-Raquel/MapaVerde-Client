@@ -15,11 +15,9 @@ const SinglePost = ({ title = "", description = "", image = "" }) => {
 
       <div className={classes["actions"]}>
         <div>
-           1550 likes
         </div>
 
         <div>
-           Bookmark
         </div>
       </div>
     </article>

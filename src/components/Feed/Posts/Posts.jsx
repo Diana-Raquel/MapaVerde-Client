@@ -2,13 +2,13 @@ import SinglePost from '../SinglePost/SinglePost';
 import classes from './Posts.module.scss';
 
 const Posts = ({ posts = [] }) => {
-  const mappedPosts = posts.map(post => {
+  const mappedPosts = posts.map(event => {
     return (
       <SinglePost
-        key={post._id}
-        title={post.title}
-        description={post.description}
-        image={post.image}
+        key={event._id}
+        title={event.title}
+        description={event.description}
+        image={event.image}
       />
     );
   })
