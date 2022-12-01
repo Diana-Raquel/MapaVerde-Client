@@ -3,10 +3,9 @@ import logo from '../../assets/mundo.png';
 import Button from '../Button/Button';
 
 import { useNavigate, Link } from 'react-router-dom';
-import { useUserContext } from '../../contexts/UserContext';
+
 
 const Header = () => {
-  const { logout, user } = useUserContext();
   const navigate = useNavigate();
   return (
     <header className={classes["Header"]} >
@@ -26,16 +25,8 @@ const Header = () => {
       </ul>
 
       <div className={classes["Buttons"]}>
-      {
-          !user ?
-            <>
-              <Button onClick={() => navigate("/auth/signin")}> Sign in </Button>
-              <Button onClick={() => navigate("/auth/signup")}> Sign up </Button>
-            </> :
-            <>
-              <Button onClick={() => { logout() }}> Sign out </Button>
-            </>
-        }
+        <Button onClick={() => navigate("/auth/signin")}> Sign in </Button>
+        <Button onClick={() => navigate("/auth/signup")}> Sign up </Button>
       </div>
     </header>
   );
