@@ -26,16 +26,11 @@ const Header = () => {
       </ul>
 
       <div className={classes["Buttons"]}>
-        {
-          !user ?
-            <>
+
               <Button onClick={() => navigate("/auth/signin")}> Iniciar Sesión </Button>
               <Button onClick={() => navigate("/auth/signup")}> Registrarse </Button>
-            </> :
-            <>
-              <Button onClick={() => { logout() }}> Cerrar Sesion </Button>
-            </>
-        }
+
+        
       </div>
     </header>
   );
