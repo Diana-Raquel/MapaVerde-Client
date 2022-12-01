@@ -49,9 +49,7 @@ export const UserContextProvider = (props) => {
     }
   }
 
-  //Función para login
-  //Función para logout
-  //Función para register
+
   const login = async (identifier, password) => {
     startLoading();
     try {
