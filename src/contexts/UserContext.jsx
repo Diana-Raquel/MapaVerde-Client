@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 
-import { useConfigContext } from './ConfigContext';
+import { useConfigContext } from './ConfigContex';
 import axios from "axios";
 
 const TOKEN_KEY = "token_wdyt";
