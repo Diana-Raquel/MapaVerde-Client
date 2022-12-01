@@ -6,7 +6,6 @@ import { useNavigate, Link } from 'react-router-dom';
 
 
 const Header = () => {
-  const { logout, user } = useUserContext();
   const navigate = useNavigate();
   return (
     <header className={classes["Header"]} >
