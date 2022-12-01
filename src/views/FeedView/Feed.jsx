@@ -28,7 +28,7 @@ const Feed = () => {
       startLoading();
       //const response = await fetch("https://mapaverde-api-production.up.railway.app/api/event/");
       const { data } = await axios.get("/event");
-      setPosts(data.posts);
+      setPosts(data.event);
     } catch (error) {
       toast.error("Unexpected error!");
     }finally{
@@ -70,7 +70,7 @@ const Feed = () => {
       {/* Formulario */}
       <NewPostForm onAddPost={onAddPostHandler} />
       {/* Main Feed */}
-      <Posts posts={posts} />
+      <Posts event={posts} />
     </div>
   )
 }
