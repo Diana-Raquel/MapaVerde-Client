@@ -61,7 +61,7 @@ export const UserContextProvider = (props) => {
       setToken(_token);
       setTokenLS(_token);
 
-      toast.success("Signin successful");
+      toast.success("Exitoso");
       //Guardar el LS nuestro token
     } catch (error) {
       const { status } = error.response || { status: 500 };
@@ -89,7 +89,7 @@ export const UserContextProvider = (props) => {
     try {
 
       await axios.post("/auth/signup", { username, email, password });
-      toast.success("Signup successful");
+      toast.success("Registro exitoso");
 
 
     } catch (error) {
