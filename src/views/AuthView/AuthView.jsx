@@ -9,7 +9,6 @@ import {useUserContext} from '../../contexts/UserContext'
 import { useNavigate } from 'react-router-dom';
 
 const AuthView = () => {
-  const navigate = useNavigate();
   const {login, register, user} =useUserContext();
 
   const onLoginHandler = async(identifier, password) =>{
@@ -18,11 +17,7 @@ const AuthView = () => {
   const onRegisterHandler = async(username,email,password) =>{
     await register(username,email,password);
   }
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user])
+
 
   return (
     <div className={classes["container"]}>
