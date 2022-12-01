@@ -6,6 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 
 const Header = () => {
+  const { logout, user } = useUserContext();
   const navigate = useNavigate();
   return (
     <header className={classes["Header"]} >
@@ -25,8 +26,16 @@ const Header = () => {
       </ul>
 
       <div className={classes["Buttons"]}>
-        <Button onClick={() => navigate("/auth/signin")}> Sign in </Button>
-        <Button onClick={() => navigate("/auth/signup")}> Sign up </Button>
+        {
+          !user ?
+            <>
+              <Button onClick={() => navigate("/auth/signin")}> Iniciar Sesión </Button>
+              <Button onClick={() => navigate("/auth/signup")}> Registrarse </Button>
+            </> :
+            <>
+              <Button onClick={() => { logout() }}> Cerrar Sesion </Button>
+            </>
+        }
       </div>
     </header>
   );
